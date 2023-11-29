@@ -4,7 +4,7 @@ Creazione di una web app ispirata a WhatsApp Web.
 
 ### Indice
 
--[ Creazione della struttura base](#milestone-1)
+-[ Creazione della struttura base - milestone 1](#milestone-1)
 
 ## Milestone 1
 
