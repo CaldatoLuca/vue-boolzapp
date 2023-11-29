@@ -1,4 +1,43 @@
 @import url(reset.css);
-@import url(palette.css);
 @import url(utility.css);
 @import url(typho.css);
+
+/* !palette */
+:root {
+  --bg-primary: #dadbd5;
+  --bg-secondary: #009788;
+  --grey-700: #6c7379;
+  --grey-600: #b1b1b1;
+  --grey-500: #eaeaea;
+  --grey-400: #f1ece8;
+  --grey-300: #fafafa;
+  --link: #528ba9;
+  --blue-primary: #8edafc;
+}
+
+/* !common */
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to top,
+    #dadbd5 0%,
+    #dadbd5 85%,
+    #009788 85%,
+    #009788 100%
+  );
+}
+.container {
+  width: 80vw;
+}
+
+/* !colonna di sinistra */
+.left-column {
+  background-color: var(--grey-600);
+  width: 35%;
+}
+/* !colonna di destra */
+.right-column {
+  background-color: var(--grey-300);
+  width: 65%;
+}
