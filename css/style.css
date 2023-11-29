@@ -37,7 +37,6 @@ body {
 }
 .icons {
   color: var(--grey-600);
-  font-size: 1.25rem;
   display: flex;
   gap: 15px;
 }
@@ -47,9 +46,26 @@ body {
   background-color: var(--grey-300);
   width: 35%;
 }
+/* *header */
 .header-left {
   background-color: var(--grey-500);
   padding: 15px;
+}
+/* *main */
+.notifications {
+  background-color: var(--blue-primary);
+  padding: 20px;
+}
+.icon-container {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-primary);
 }
 
 /* !colonna di destra */

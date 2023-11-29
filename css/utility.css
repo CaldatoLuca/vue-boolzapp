@@ -13,11 +13,3 @@
   align-items: center;
   justify-content: center;
 }
-
-/* !sizing */
-.h-70 {
-  height: 40px;
-}
-.h-80 {
-  height: 80px;
-}
