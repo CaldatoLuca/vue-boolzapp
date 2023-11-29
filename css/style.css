@@ -41,10 +41,6 @@ body {
   display: flex;
   gap: 15px;
 }
-.search input {
-  padding: 5px;
-  border: none;
-}
 
 /* !colonna di sinistra */
 .left-column {
@@ -83,6 +79,7 @@ body {
 }
 .left-search input {
   width: 80%;
+  padding: 10px 0;
 }
 .contacts {
   background-color: white;
@@ -90,7 +87,7 @@ body {
   overflow-y: scroll;
 }
 .contacts li {
-  border-bottom: 1px solid var(--grey-300);
+  border-bottom: 2px solid var(--grey-300);
 }
 /* !colonna di destra */
 .right-column {
