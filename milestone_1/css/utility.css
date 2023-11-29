@@ -5,6 +5,9 @@
 .space-between {
   justify-content: space-between;
 }
+.around {
+  justify-content: space-around;
+}
 .align-center {
   align-items: center;
 }
@@ -12,6 +15,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
 }
 
 /* !padding */

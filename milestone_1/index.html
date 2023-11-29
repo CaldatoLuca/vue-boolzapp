@@ -53,7 +53,7 @@
           <!-- ?header colonna di sinistra/ -->
 
           <!-- ?main colonna di sinistra/ -->
-          <div class="main-left">
+          <div class="main-left flex flex-column">
             <!-- campanellina -->
             <div class="notifications flex align-center p-20">
               <div class="icon-container">
@@ -66,7 +66,7 @@
             </div>
 
             <!-- barra di ricerca -->
-            <div class="search left-search p-10 flex">
+            <div class="left-search p-10 flex">
               <i class="fa-solid fa-magnifying-glass flex-center"></i>
               <input type="text" placeholder="Cerca o inizia una nuova chat" />
             </div>
@@ -94,7 +94,44 @@
         <!-- *colonna di sinistra/ -->
 
         <!-- *colonna di destra-->
-        <div class="right-column">right</div>
+        <div class="right-column">
+          <!-- chat col contatto specifico -->
+          <div class="contact-chat flex flex-column">
+            <!-- ?header colonna di sinistra -->
+            <div class="header-right flex space-between align-center p-15">
+              <!-- informazioni utente proprietario -->
+              <div class="main-user flex align-center">
+                <div class="img-container">
+                  <img
+                    :src="contacts[0].avatar"
+                    :alt="`Immagine di ${mainUser.name}`"
+                  />
+                </div>
+                <div class="user-name">{{ contacts[0].name }}</div>
+              </div>
+
+              <!-- icone -->
+              <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-paperclip"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+            <!-- ?header colonna di sinistra/ -->
+
+            <!-- ?messaggi -->
+            <div class="chat"></div>
+            <!-- ?messaggi/ -->
+          </div>
+
+          <!-- area di compilazione del messaggio -->
+          <div class="right-search flex align-center around">
+            <i class="fa-regular fa-face-smile"></i>
+            <!-- barra di ricerca -->
+            <input type="text" placeholder="Scrivi un messaggio" />
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+        </div>
         <!-- *colonna di destra-->
       </div>
       <!-- *contenitore app/ -->
@@ -108,5 +145,3 @@
     <!-- !my js/ -->
   </body>
 </html>
-
-<!-- prova git -->
