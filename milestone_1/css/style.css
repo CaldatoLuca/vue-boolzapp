@@ -14,6 +14,7 @@
   --sand: #f5eee8;
   --link: #528ba9;
   --blue-primary: #8edafc;
+  --main-green: #d5f9ba;
 }
 
 /* !common */
@@ -112,6 +113,16 @@ body {
   background-image: url(../img/mine.jpg);
   flex-grow: 1;
   overflow-y: scroll;
+  padding: 70px 100px;
+}
+.message {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.text {
+  width: 40%;
+  border-radius: 10px;
+  padding: 20px;
 }
 .right-search {
   background-color: var(--sand);

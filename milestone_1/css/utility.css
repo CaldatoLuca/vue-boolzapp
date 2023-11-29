@@ -11,6 +11,9 @@
 .align-center {
   align-items: center;
 }
+.justify-center {
+  justify-content: center;
+}
 .flex-center {
   display: flex;
   align-items: center;
@@ -29,4 +32,15 @@
 }
 .p-20 {
   padding: 1.25rem;
+}
+
+/* !messaggi */
+.sent {
+  justify-content: flex-end;
+}
+.sent .text {
+  background-color: var(--main-green);
+}
+.received .text {
+  background-color: white;
 }
