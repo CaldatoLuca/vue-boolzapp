@@ -29,6 +29,7 @@ body {
 }
 .container {
   width: 80vw;
+  height: 90vh;
 }
 .img-container {
   width: 50px;
@@ -40,7 +41,7 @@ body {
   display: flex;
   gap: 15px;
 }
-.navbar input {
+.search input {
   padding: 5px;
   border: none;
 }
@@ -53,8 +54,14 @@ body {
 /* *header */
 .header-left {
   background-color: var(--grey-500);
+  height: 10%;
 }
 /* *main */
+.main-left {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
 .notifications {
   background-color: var(--blue-primary);
 }
@@ -69,13 +76,21 @@ body {
   justify-content: center;
   color: var(--blue-primary);
 }
-.left-navbar i {
+.left-search i {
   color: var(--grey-600);
   background-color: white;
   width: 20%;
 }
-.left-navbar input {
+.left-search input {
   width: 80%;
+}
+.contacts {
+  background-color: white;
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+.contacts li {
+  border-bottom: 1px solid var(--grey-300);
 }
 /* !colonna di destra */
 .right-column {

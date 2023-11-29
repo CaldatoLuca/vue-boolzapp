@@ -15,3 +15,6 @@ img {
 a {
   color: var(--link);
 }
+ul {
+  list-style-type: none;
+}

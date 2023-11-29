@@ -66,13 +66,28 @@
             </div>
 
             <!-- barra di ricerca -->
-            <div class="navbar left-navbar p-10 flex">
+            <div class="search left-search p-10 flex">
               <i class="fa-solid fa-magnifying-glass flex-center"></i>
               <input type="text" placeholder="Cerca o inizia una nuova chat" />
             </div>
 
             <!-- lista contatti -->
-            <div class="contacts"></div>
+            <div class="contacts">
+              <ul>
+                <li v-for="contact in contacts">
+                  <!-- informazioni contatto -->
+                  <div class="main-user flex p-20">
+                    <div class="img-container">
+                      <img
+                        :src="contact.avatar"
+                        :alt="`Immagine di ${mainUser.name}`"
+                      />
+                    </div>
+                    <div class="user-name">{{ contact.name }}</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
           <!-- ?main colonna di sinistra/ -->
         </div>
