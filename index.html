@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boolzapp</title>
+    <!-- !font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d7e1ca7451.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- !font awesome/ -->
+
     <!-- !google font lato -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,10 +26,43 @@
   </head>
   <body class="flex-center">
     <div id="app" v-cloak>
+      <!-- *contenitore app-->
       <div class="container flex">
-        <div class="left-column">left</div>
+        <!-- *colonna di sinistra -->
+        <div class="left-column">
+          <!-- ?header colonna di sinistra -->
+          <div class="header-left flex space-between align-center">
+            <!-- informazioni utente proprietario -->
+            <div class="main-user flex align-center">
+              <div class="img-container">
+                <img
+                  :src="mainUser.avatar"
+                  :alt="`Immagine di ${mainUser.name}`"
+                />
+              </div>
+              <div class="user-name">{{ mainUser.name }}</div>
+            </div>
+
+            <!-- icone -->
+            <div class="icons">
+              <i class="fa-solid fa-circle-notch"></i>
+              <i class="fa-solid fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <!-- ?header colonna di sinistra/ -->
+
+          <!-- ?main colonna di sinistra/ -->
+          <div class="main-left"></div>
+          <!-- ?main colonna di sinistra/ -->
+        </div>
+        <!-- *colonna di sinistra/ -->
+
+        <!-- *colonna di destra-->
         <div class="right-column">right</div>
+        <!-- *colonna di destra-->
       </div>
+      <!-- *contenitore app/ -->
     </div>
 
     <!-- !vue js -->

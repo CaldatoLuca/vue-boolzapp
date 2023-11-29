@@ -2,8 +2,22 @@
 .flex {
   display: flex;
 }
+.space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* !sizing */
+.h-70 {
+  height: 40px;
+}
+.h-80 {
+  height: 80px;
 }

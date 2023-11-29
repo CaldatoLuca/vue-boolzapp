@@ -30,12 +30,28 @@ body {
 .container {
   width: 80vw;
 }
+.img-container {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.icons {
+  color: var(--grey-600);
+  font-size: 1.25rem;
+  display: flex;
+  gap: 15px;
+}
 
 /* !colonna di sinistra */
 .left-column {
-  background-color: var(--grey-600);
+  background-color: var(--grey-300);
   width: 35%;
 }
+.header-left {
+  background-color: var(--grey-500);
+  padding: 15px;
+}
+
 /* !colonna di destra */
 .right-column {
   background-color: var(--grey-300);

@@ -4,7 +4,11 @@ const { createApp } = Vue;
 
 const vueConfig = {
   data() {
-    contacts = [
+    const mainUser = {
+      name: "John Doe",
+      avatar: "./img/avatar_io.jpg",
+    };
+    const contacts = [
       {
         name: "Michele",
         avatar: "./img/avatar_1.png",
@@ -169,6 +173,7 @@ const vueConfig = {
     ];
 
     return {
+      mainUser,
       contacts,
     };
   },
