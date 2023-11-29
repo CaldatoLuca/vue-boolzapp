@@ -8,3 +8,6 @@ body {
 i {
   font-size: 1.25rem;
 }
+.left-navbar i {
+  font-size: 1rem;
+}

@@ -40,6 +40,10 @@ body {
   display: flex;
   gap: 15px;
 }
+.navbar input {
+  padding: 5px;
+  border: none;
+}
 
 /* !colonna di sinistra */
 .left-column {
@@ -49,12 +53,10 @@ body {
 /* *header */
 .header-left {
   background-color: var(--grey-500);
-  padding: 15px;
 }
 /* *main */
 .notifications {
   background-color: var(--blue-primary);
-  padding: 20px;
 }
 .icon-container {
   width: 60px;
@@ -67,7 +69,14 @@ body {
   justify-content: center;
   color: var(--blue-primary);
 }
-
+.left-navbar i {
+  color: var(--grey-600);
+  background-color: white;
+  width: 20%;
+}
+.left-navbar input {
+  width: 80%;
+}
 /* !colonna di destra */
 .right-column {
   background-color: var(--grey-300);

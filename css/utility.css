@@ -13,3 +13,14 @@
   align-items: center;
   justify-content: center;
 }
+
+/* !padding */
+.p-10 {
+  padding: 0.625rem;
+}
+.p-15 {
+  padding: 0.9375rem;
+}
+.p-20 {
+  padding: 1.25rem;
+}
