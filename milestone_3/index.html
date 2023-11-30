@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolzapp</title>
+    <!-- !font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d7e1ca7451.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- !font awesome/ -->
+
+    <!-- !google font lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- !google font lato/ -->
+
+    <!-- !my css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- !my css/ -->
+  </head>
+  <body class="flex-center">
+    <div id="app" v-cloak>
+      <!-- *contenitore app-->
+      <div class="container flex">
+        <!-- *colonna di sinistra -->
+        <div class="left-column">
+          <!-- ?header colonna di sinistra -->
+          <div class="header-left flex space-between align-center p-15">
+            <!-- informazioni utente proprietario -->
+            <div class="main-user flex align-center">
+              <div class="img-container">
+                <img
+                  :src="mainUser.avatar"
+                  :alt="`Immagine di ${mainUser.name}`"
+                />
+              </div>
+              <h3>{{ mainUser.name }}</h3>
+            </div>
+
+            <!-- icone -->
+            <ul class="icons">
+              <li><i class="fa-solid fa-circle-notch"></i></li>
+              <li><i class="fa-solid fa-message"></i></li>
+              <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+            </ul>
+          </div>
+          <!-- ?header colonna di sinistra/ -->
+
+          <!-- ?main colonna di sinistra/ -->
+          <div class="main-left flex flex-column">
+            <!-- campanellina -->
+            <div class="notifications flex align-center p-20">
+              <div class="icon-container">
+                <i class="fa-solid fa-bell-slash"></i>
+              </div>
+              <div class="notifications-alert">
+                <div>Ricevi notifiche di nuovi messaggi</div>
+                <a href="index.html">Attiva notifiche desktop</a>
+              </div>
+            </div>
+
+            <!-- barra di ricerca -->
+            <div class="left-search p-10 flex">
+              <i class="fa-solid fa-magnifying-glass flex-center"></i>
+              <input type="text" placeholder="Cerca o inizia una nuova chat" />
+            </div>
+
+            <!-- lista contatti -->
+            <div class="contacts">
+              <ul>
+                <li v-for="(contact, index) in contacts">
+                  <!-- informazioni contatto -->
+                  <div
+                    class="main-user flex p-20"
+                    :class="selectedContact(index)"
+                    @click="changeContact(index)"
+                  >
+                    <div class="img-container">
+                      <img
+                        :src="contact.avatar"
+                        :alt="`Immagine di ${mainUser.name}`"
+                      />
+                    </div>
+                    <h4>{{ contact.name }}</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- ?main colonna di sinistra/ -->
+        </div>
+        <!-- *colonna di sinistra/ -->
+
+        <!-- *colonna di destra-->
+        <div class="right-column">
+          <!-- chat col contatto specifico -->
+          <div class="contact-chat flex flex-column">
+            <!-- ?header colonna di destra -->
+            <div class="header-right flex space-between align-center p-15">
+              <!-- informazioni utente proprietario -->
+              <div class="main-user flex align-center">
+                <div class="img-container">
+                  <img
+                    :src="contacts[currentContact].avatar"
+                    :alt="`Immagine di ${mainUser.name}`"
+                  />
+                </div>
+                <h3>{{ contacts[currentContact].name }}</h3>
+              </div>
+
+              <!-- icone -->
+              <ul class="icons">
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li><i class="fa-solid fa-paperclip"></i></li>
+                <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+              </ul>
+            </div>
+            <!-- ?header colonna di destra/ -->
+
+            <!-- ?messaggi -->
+            <ul class="chat flex flex-column align-center">
+              <li
+                v-for="message in contacts[currentContact].messages"
+                class="message flex"
+                :class="checkStatus(message.status)"
+              >
+                <div class="text">{{message.message}}</div>
+              </li>
+            </ul>
+            <!-- ?messaggi/ -->
+          </div>
+
+          <!-- area di compilazione del messaggio -->
+          <div class="right-search flex align-center around">
+            <i class="fa-regular fa-face-smile"></i>
+            <!-- barra di ricerca -->
+            <input type="text" placeholder="Scrivi un messaggio" />
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+        </div>
+        <!-- *colonna di destra-->
+      </div>
+      <!-- *contenitore app/ -->
+    </div>
+
+    <!-- !vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- !vue js -->
+    <!-- !my js -->
+    <script src="js/main.js"></script>
+    <!-- !my js/ -->
+  </body>
+</html>

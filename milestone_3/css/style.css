@@ -1,0 +1,143 @@
+@import url(reset.css);
+@import url(utility.css);
+@import url(typho.css);
+
+/* !palette */
+:root {
+  --bg-primary: #dadbd5;
+  --bg-secondary: #009788;
+  --grey-700: #6c7379;
+  --grey-600: #b1b1b1;
+  --grey-500: #eaeaea;
+  --grey-400: #f1ece8;
+  --grey-300: #fafafa;
+  --sand: #f5eee8;
+  --link: #528ba9;
+  --blue-primary: #8edafc;
+  --main-green: #d5f9ba;
+}
+
+/* !common */
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to top,
+
+    #dadbd5 85%,
+    #009788 15%
+  );
+}
+.container {
+  width: 80vw;
+  height: 90vh;
+}
+.header-left,
+.header-right {
+  background-color: var(--grey-500);
+  height: 80px;
+}
+.img-container {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.icons {
+  color: var(--grey-600);
+  display: flex;
+  gap: 15px;
+}
+
+/* !colonna di sinistra */
+.left-column {
+  background-color: var(--grey-300);
+  width: 35%;
+}
+/* *main */
+.main-left {
+  height: calc(100% - 80px);
+}
+.notifications {
+  background-color: var(--blue-primary);
+}
+.icon-container {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-primary);
+}
+.left-search i {
+  color: var(--grey-600);
+  background-color: #ffffff;
+  width: 20%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 0.5px solid var(--grey-400);
+  border-right: none;
+}
+.left-search input {
+  width: 80%;
+  padding: 10px 0;
+  border-left: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 0.5px solid var(--grey-400);
+  border-left: none;
+}
+.contacts {
+  background-color: #ffffff;
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+.contacts ul {
+  border-right: 2px solid var(--grey-400);
+}
+.contacts li {
+  border-bottom: 1px solid var(--grey-500);
+  cursor: pointer;
+}
+
+/* !colonna di destra */
+.right-column {
+  background-color: var(--grey-300);
+  width: 65%;
+}
+.contact-chat {
+  height: calc(100% - 80px);
+}
+
+.header-right {
+  border-left: 2px solid var(--grey-600);
+}
+.chat {
+  background-image: url(../img/mine.jpg);
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding: 70px 100px;
+}
+.message {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.text {
+  width: 40%;
+  border-radius: 10px;
+  padding: 20px;
+}
+.right-search {
+  background-color: var(--sand);
+  height: 80px;
+}
+.right-search input {
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.right-search i {
+  color: var(--grey-700);
+}

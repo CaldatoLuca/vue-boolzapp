@@ -1,0 +1,27 @@
+[v-cloak] {
+  display: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+}
+a {
+  color: var(--link);
+}
+ul {
+  list-style-type: none;
+}
+input {
+  border: none;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
