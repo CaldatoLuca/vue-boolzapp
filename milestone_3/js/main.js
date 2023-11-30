@@ -191,6 +191,13 @@ const vueConfig = {
     selectedContact(index) {
       if (this.currentContact === index) return "selected";
     },
+    contactAnswer() {
+      this.contacts[this.currentContact].messages.push({
+        date: "10/01/2020 15:51:00",
+        message: "ok!",
+        status: "received",
+      });
+    },
     newMessage() {
       if (this.userText.trim() === "") {
         return;
@@ -202,6 +209,7 @@ const vueConfig = {
         });
         this.userText = "";
       }
+      setTimeout(this.contactAnswer, 3000);
     },
   },
 };
