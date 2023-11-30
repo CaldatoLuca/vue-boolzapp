@@ -99,7 +99,9 @@ body {
 }
 .contacts li {
   border-bottom: 1px solid var(--grey-500);
+  cursor: pointer;
 }
+
 /* !colonna di destra */
 .right-column {
   background-color: var(--grey-300);
@@ -138,10 +140,4 @@ body {
 }
 .right-search i {
   color: var(--grey-700);
-}
-
-/* !eventi css */
-.contacts .main-user:hover {
-  background-color: var(--grey-500);
-  cursor: pointer;
 }

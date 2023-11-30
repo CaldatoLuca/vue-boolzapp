@@ -78,6 +78,7 @@
                   <!-- informazioni contatto -->
                   <div
                     class="main-user flex p-20"
+                    :class="selectedContact(index)"
                     @click="changeContact(index)"
                   >
                     <div class="img-container">

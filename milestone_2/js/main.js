@@ -186,6 +186,9 @@ const vueConfig = {
     changeContact(index) {
       this.currentContact = index;
     },
+    selectedContact(index) {
+      if (this.currentContact === index) return "selected";
+    },
   },
 };
 
