@@ -126,8 +126,10 @@ body {
 }
 .text {
   width: 40%;
+  height: auto;
   border-radius: 10px;
   padding: 20px;
+  overflow-wrap: break-word;
 }
 .right-search {
   background-color: var(--sand);

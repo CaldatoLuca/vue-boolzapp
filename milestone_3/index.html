@@ -140,7 +140,12 @@
           <div class="right-search flex align-center around">
             <i class="fa-regular fa-face-smile"></i>
             <!-- barra di ricerca -->
-            <input type="text" placeholder="Scrivi un messaggio" />
+            <input
+              @keyup.enter="newMessage"
+              v-model="userText"
+              type="text"
+              placeholder="Scrivi un messaggio"
+            />
             <i class="fa-solid fa-microphone"></i>
           </div>
         </div>
