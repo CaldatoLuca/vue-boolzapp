@@ -222,6 +222,7 @@ const vueConfig = {
             return {
               ...contact,
               name: contact.name,
+              index: 0,
             };
           });
       } else {
