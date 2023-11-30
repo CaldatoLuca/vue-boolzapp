@@ -209,7 +209,7 @@ const vueConfig = {
         });
         this.userText = "";
       }
-      setTimeout(this.contactAnswer, 3000);
+      setTimeout(this.contactAnswer, 1000);
     },
   },
 };
