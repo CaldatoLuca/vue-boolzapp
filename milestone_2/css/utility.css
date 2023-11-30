@@ -1,0 +1,46 @@
+/* !flex */
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+.around {
+  justify-content: space-around;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+/* !padding */
+.p-10 {
+  padding: 0.625rem;
+}
+.p-15 {
+  padding: 0.9375rem;
+}
+.p-20 {
+  padding: 1.25rem;
+}
+
+/* !messaggi */
+.sent {
+  justify-content: flex-end;
+}
+.sent .text {
+  background-color: var(--main-green);
+}
+.received .text {
+  background-color: white;
+}
