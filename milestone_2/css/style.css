@@ -139,3 +139,9 @@ body {
 .right-search i {
   color: var(--grey-700);
 }
+
+/* !eventi css */
+.contacts .main-user:hover {
+  background-color: var(--grey-500);
+  cursor: pointer;
+}

@@ -4,6 +4,7 @@ const { createApp } = Vue;
 
 const vueConfig = {
   data() {
+    let currentContact = 0;
     const mainUser = {
       name: "John Doe",
       avatar: "./img/avatar_io.jpg",
@@ -173,6 +174,7 @@ const vueConfig = {
     ];
 
     return {
+      currentContact,
       mainUser,
       contacts,
     };
@@ -180,6 +182,9 @@ const vueConfig = {
   methods: {
     checkStatus(status) {
       return status;
+    },
+    changeContact(index) {
+      this.currentContact = index;
     },
   },
 };
