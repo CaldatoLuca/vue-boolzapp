@@ -68,13 +68,17 @@
             <!-- barra di ricerca -->
             <div class="left-search p-10 flex">
               <i class="fa-solid fa-magnifying-glass flex-center"></i>
-              <input type="text" placeholder="Cerca o inizia una nuova chat" />
+              <input
+                v-model="searchText"
+                type="text"
+                placeholder="Cerca o inizia una nuova chat"
+              />
             </div>
 
             <!-- lista contatti -->
             <div class="contacts">
               <ul>
-                <li v-for="(contact, index) in contacts">
+                <li v-for="(contact, index) in searchContact()">
                   <!-- informazioni contatto -->
                   <div
                     class="main-user flex p-20"
@@ -107,11 +111,11 @@
               <div class="main-user flex align-center">
                 <div class="img-container">
                   <img
-                    :src="contacts[currentContact].avatar"
+                    :src="searchContact()[currentContact].avatar"
                     :alt="`Immagine di ${mainUser.name}`"
                   />
                 </div>
-                <h3>{{ contacts[currentContact].name }}</h3>
+                <h3>{{ searchContact()[currentContact].name }}</h3>
               </div>
 
               <!-- icone -->
@@ -126,7 +130,7 @@
             <!-- ?messaggi -->
             <ul class="chat flex flex-column align-center">
               <li
-                v-for="message in contacts[currentContact].messages"
+                v-for="message in searchContact()[currentContact].messages"
                 class="message flex"
                 :class="checkStatus(message.status)"
               >

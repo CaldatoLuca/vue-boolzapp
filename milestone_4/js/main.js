@@ -5,6 +5,7 @@ const { createApp } = Vue;
 const vueConfig = {
   data() {
     let userText = "";
+    let searchText = "";
     let currentContact = 0;
     const mainUser = {
       name: "John Doe",
@@ -176,6 +177,7 @@ const vueConfig = {
 
     return {
       userText,
+      searchText,
       currentContact,
       mainUser,
       contacts,
@@ -192,7 +194,7 @@ const vueConfig = {
       if (this.currentContact === index) return "selected";
     },
     contactAnswer() {
-      this.contacts[this.currentContact].messages.push({
+      this.searchContact()[this.currentContact].messages.push({
         date: "10/01/2020 15:51:00",
         message: "ok!",
         status: "received",
@@ -202,7 +204,7 @@ const vueConfig = {
       if (this.userText.trim() === "") {
         return;
       } else {
-        this.contacts[this.currentContact].messages.push({
+        this.searchContact()[this.currentContact].messages.push({
           date: "10/01/2020 15:51:00",
           message: this.userText,
           status: "sent",
@@ -210,6 +212,22 @@ const vueConfig = {
         this.userText = "";
       }
       setTimeout(this.contactAnswer, 1000);
+    },
+    searchContact() {
+      if (this.searchText.trim() !== "") {
+        return this.contacts
+          .filter((contact) =>
+            contact.name.toLowerCase().includes(this.searchText.toLowerCase())
+          )
+          .map((contact) => {
+            return {
+              ...contact,
+              name: contact.name,
+            };
+          });
+      } else {
+        return this.contacts;
+      }
     },
   },
 };
