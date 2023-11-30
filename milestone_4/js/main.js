@@ -5,7 +5,6 @@ const { createApp } = Vue;
 const vueConfig = {
   data() {
     let userText = "";
-    let searchText = "";
     let currentContact = 0;
     const mainUser = {
       name: "John Doe",
@@ -177,10 +176,10 @@ const vueConfig = {
 
     return {
       userText,
-      searchText,
       currentContact,
       mainUser,
       contacts,
+      searchText: "",
     };
   },
   methods: {
@@ -194,7 +193,7 @@ const vueConfig = {
       if (this.currentContact === index) return "selected";
     },
     contactAnswer() {
-      this.searchContact()[this.currentContact].messages.push({
+      this.contacts[this.currentContact].messages.push({
         date: "10/01/2020 15:51:00",
         message: "ok!",
         status: "received",
@@ -204,7 +203,7 @@ const vueConfig = {
       if (this.userText.trim() === "") {
         return;
       } else {
-        this.searchContact()[this.currentContact].messages.push({
+        this.contacts[this.currentContact].messages.push({
           date: "10/01/2020 15:51:00",
           message: this.userText,
           status: "sent",

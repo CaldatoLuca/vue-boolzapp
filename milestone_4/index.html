@@ -111,11 +111,11 @@
               <div class="main-user flex align-center">
                 <div class="img-container">
                   <img
-                    :src="searchContact()[currentContact].avatar"
+                    :src="contacts[currentContact].avatar"
                     :alt="`Immagine di ${mainUser.name}`"
                   />
                 </div>
-                <h3>{{ searchContact()[currentContact].name }}</h3>
+                <h3>{{ contacts[currentContact].name }}</h3>
               </div>
 
               <!-- icone -->
@@ -130,7 +130,7 @@
             <!-- ?messaggi -->
             <ul class="chat flex flex-column align-center">
               <li
-                v-for="message in searchContact()[currentContact].messages"
+                v-for="message in contacts[currentContact].messages"
                 class="message flex"
                 :class="checkStatus(message.status)"
               >
@@ -166,5 +166,3 @@
     <!-- !my js/ -->
   </body>
 </html>
-
-<!-- !TODO imporre condizione affinchè non si veda il contatto se digito qualcosa non presente nei nomi -->
