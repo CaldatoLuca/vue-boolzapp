@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boolzapp</title>
+    <script src="
+    https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js
+    "></script>
     <!-- !font awesome -->
     <script
       src="https://kit.fontawesome.com/d7e1ca7451.js"
@@ -92,6 +95,9 @@
                       />
                     </div>
                     <h4>{{ contact.name }}</h4>
+                    <div>
+                      {{contact.messages[lastMessageIndex(index)].time}}
+                    </div>
                   </div>
                 </li>
               </ul>

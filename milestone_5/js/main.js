@@ -4,6 +4,7 @@ const { createApp } = Vue;
 
 const vueConfig = {
   data() {
+    var DateTime = luxon.DateTime;
     let userText = "";
     let currentContact = 0;
     const mainUser = {
@@ -17,7 +18,7 @@ const vueConfig = {
         visible: true,
         messages: [
           {
-            date: "10/01/2020 15:30:55",
+            date: "10/01/2020 15.30.55",
             message: "Hai portato a spasso il cane?",
             status: "sent",
           },
@@ -28,6 +29,7 @@ const vueConfig = {
           },
           {
             date: "10/01/2020 16:15:22",
+            time: DateTime.fromISO("16:15:22").toFormat("hh:mm a"),
             message: "Tutto fatto!",
             status: "received",
           },
@@ -51,6 +53,7 @@ const vueConfig = {
           },
           {
             date: "20/03/2020 16:35:00",
+            time: DateTime.fromISO("16:35").toFormat("hh:mm a"),
             message: "Mi piacerebbe ma devo andare a fare la spesa.",
             status: "sent",
           },
@@ -234,6 +237,9 @@ const vueConfig = {
             name: contact.name,
           };
         });
+    },
+    lastMessageIndex(index) {
+      return this.contacts[index].messages.length - 1;
     },
   },
 };
