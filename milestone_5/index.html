@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boolzapp</title>
-    <script src="
-    https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js
-    "></script>
     <!-- !font awesome -->
     <script
       src="https://kit.fontawesome.com/d7e1ca7451.js"
@@ -85,8 +82,8 @@
                   <!-- informazioni contatto -->
                   <div
                     class="main-user flex p-20"
-                    :class="selectedContact(contact.originalIndex)"
-                    @click="changeContact(contact.originalIndex)"
+                    :class="selectedContact(index)"
+                    @click="changeContact(index)"
                   >
                     <div class="img-container">
                       <img
@@ -97,11 +94,11 @@
                     <div>
                       <h4>{{ contact.name }}</h4>
                       <div class="last-message">
-                        {{contact.messages[lastMessageIndex(index)].message}}
+                        {{contact.messages[lastIndex(contact.messages)].message}}
                       </div>
                     </div>
                     <div class="time">
-                      {{contact.messages[lastMessageIndex(index)].time}}
+                      {{contact.messages[lastIndex(contact.messages)].date}}
                     </div>
                   </div>
                 </li>
@@ -122,11 +119,11 @@
               <div class="main-user flex align-center">
                 <div class="img-container">
                   <img
-                    :src="contacts[currentContact].avatar"
+                    :src="searchContact()[currentContact].avatar"
                     :alt="`Immagine di ${mainUser.name}`"
                   />
                 </div>
-                <h3>{{ contacts[currentContact].name }}</h3>
+                <h3>{{ searchContact()[currentContact].name }}</h3>
               </div>
 
               <!-- icone -->
@@ -141,14 +138,13 @@
             <!-- ?messaggi -->
             <ul class="chat flex flex-column align-center">
               <li
-                v-for="(message, index) in contacts[currentContact].messages"
+                v-for="(message, index) in searchContact()[currentContact].messages"
                 class="message flex"
                 :class="checkStatus(message.status)"
               >
-                <!-- testo del messaggio -->
                 <div class="text flex space-between align-center">
                   <div>{{message.message}}</div>
-                  <span class="time">{{ message.time }}</span>
+                  <span class="time">{{ message.date }}</span>
                   <!-- freccia con opzioni messaggio -->
                   <i class="fa-solid fa-chevron-down"></i>
                   <div class="message-option">
