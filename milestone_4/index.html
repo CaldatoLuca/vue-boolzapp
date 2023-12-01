@@ -82,8 +82,8 @@
                   <!-- informazioni contatto -->
                   <div
                     class="main-user flex p-20"
-                    :class="selectedContact(index)"
-                    @click="changeContact(index)"
+                    :class="selectedContact(contact.originalIndex)"
+                    @click="changeContact(contact.originalIndex)"
                   >
                     <div class="img-container">
                       <img
@@ -130,11 +130,14 @@
             <!-- ?messaggi -->
             <ul class="chat flex flex-column align-center">
               <li
-                v-for="message in contacts[currentContact].messages"
+                v-for="(message) in contacts[currentContact].messages"
                 class="message flex"
                 :class="checkStatus(message.status)"
               >
-                <div class="text">{{message.message}}</div>
+                <!-- testo del messaggio -->
+                <div class="text flex space-between align-center">
+                  {{message.message}}
+                </div>
               </li>
             </ul>
             <!-- ?messaggi/ -->

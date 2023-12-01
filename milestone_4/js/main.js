@@ -32,6 +32,7 @@ const vueConfig = {
             status: "received",
           },
         ],
+        originalIndex: 0,
       },
       {
         name: "Fabio",
@@ -54,6 +55,7 @@ const vueConfig = {
             status: "sent",
           },
         ],
+        originalIndex: 1,
       },
       {
         name: "Samuele",
@@ -76,6 +78,7 @@ const vueConfig = {
             status: "received",
           },
         ],
+        originalIndex: 2,
       },
       {
         name: "Alessandro B.",
@@ -93,6 +96,7 @@ const vueConfig = {
             status: "received",
           },
         ],
+        originalIndex: 3,
       },
       {
         name: "Alessandro L.",
@@ -110,6 +114,7 @@ const vueConfig = {
             status: "received",
           },
         ],
+        originalIndex: 4,
       },
       {
         name: "Claudia",
@@ -132,6 +137,7 @@ const vueConfig = {
             status: "sent",
           },
         ],
+        originalIndex: 5,
       },
       {
         name: "Federico",
@@ -149,6 +155,7 @@ const vueConfig = {
             status: "received",
           },
         ],
+        originalIndex: 6,
       },
       {
         name: "Davide",
@@ -171,6 +178,7 @@ const vueConfig = {
             status: "received",
           },
         ],
+        originalIndex: 7,
       },
     ];
 
@@ -212,22 +220,18 @@ const vueConfig = {
       }
       setTimeout(this.contactAnswer, 1000);
     },
+
     searchContact() {
-      if (this.searchText.trim() !== "") {
-        return this.contacts
-          .filter((contact) =>
-            contact.name.toLowerCase().includes(this.searchText.toLowerCase())
-          )
-          .map((contact) => {
-            return {
-              ...contact,
-              name: contact.name,
-              index: 0,
-            };
-          });
-      } else {
-        return this.contacts;
-      }
+      return this.contacts
+        .filter((contact) =>
+          contact.name.toLowerCase().includes(this.searchText.toLowerCase())
+        )
+        .map((contact) => {
+          return {
+            ...contact,
+            name: contact.name,
+          };
+        });
     },
   },
 };
