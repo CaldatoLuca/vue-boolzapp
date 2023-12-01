@@ -11,3 +11,7 @@ i {
 .left-search i {
   font-size: 1rem;
 }
+.time,
+.last-message {
+  font-size: 12px;
+}

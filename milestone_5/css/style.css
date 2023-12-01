@@ -47,6 +47,16 @@ body {
   display: flex;
   gap: 15px;
 }
+.main-user {
+  width: 100%;
+}
+.time {
+  margin-left: auto;
+}
+.last-message,
+.time {
+  color: var(--grey-600);
+}
 
 /* !colonna di sinistra */
 .left-column {
@@ -130,6 +140,11 @@ body {
   padding: 20px;
   overflow-wrap: break-word;
   position: relative;
+}
+.text .time {
+  position: absolute;
+  right: 3.5%;
+  bottom: 5%;
 }
 .text .fa-chevron-down {
   display: none;

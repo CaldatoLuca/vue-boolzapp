@@ -94,8 +94,13 @@
                         :alt="`Immagine di ${mainUser.name}`"
                       />
                     </div>
-                    <h4>{{ contact.name }}</h4>
                     <div>
+                      <h4>{{ contact.name }}</h4>
+                      <div class="last-message">
+                        {{contact.messages[lastMessageIndex(index)].message}}
+                      </div>
+                    </div>
+                    <div class="time">
                       {{contact.messages[lastMessageIndex(index)].time}}
                     </div>
                   </div>
@@ -142,7 +147,8 @@
               >
                 <!-- testo del messaggio -->
                 <div class="text flex space-between align-center">
-                  {{message.message}}
+                  <div>{{message.message}}</div>
+                  <span class="time">{{ message.time }}</span>
                   <!-- freccia con opzioni messaggio -->
                   <i class="fa-solid fa-chevron-down"></i>
                   <div class="message-option">
