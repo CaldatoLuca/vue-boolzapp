@@ -122,7 +122,7 @@ Per la visualizzazione dei messaggi ho utilizzato un `v-for` come da consegna, c
 
 Per la visualizzazione della chat ho inizializzato la funzione `changeContact()` che assegna a currentContact il contatto su cui clicco. Per assegnare lo style ho implementato la funzione `checkStatus()` che semplicemente fa un return del valore dello status del messaggio (chiamando le classi css come i valori della chiave `status`: 'received' e 'sent')
 
-Nella sezione dedicata alla chat (dell' html) visualizzo le proprietà del currentContat (controllando all' inizio col `v-if` se currenContact ha un valore)
+Nella sezione dedicata alla chat (dell' html) visualizzo le proprietà del currentContat (controllando all' inizio col `v-if` se currenContact abbia un valore)
 
 ## Milestone 3
 
@@ -175,9 +175,9 @@ Nella sezione dedicata alla chat (dell' html) visualizzo le proprietà del curre
     },
 ```
 
-Inserisco nell' imput un v-model che utilizzerò per inviare il messaggio, assegno anche un evento al click del pulsante enter (`newMessage`).
+Inserisco nell' input un v-model che utilizzerò per inviare il messaggio, assegno anche un evento al click del pulsante enter (`newMessage`).
 
-La funzione `newMessage()` pusha all' interno dell' array dei messaggi (del currentContact) un nuovo oggetto messaggio che ha: come testo il v-model(userText), come status 'sent' e come data quella corrente del computer. Richiama la funzione `contactAnswer` dopo 1 sec e svuota la barra di input. Tutto questo avviene solo se il testo digitato non è composto da soli spazi.
+La funzione `newMessage()` pusha all' interno dell' array dei messaggi (del currentContact) un nuovo oggetto messaggio che ha come testo il v-model(userText), come status 'sent' e come data quella corrente del computer. Richiama la funzione `contactAnswer` dopo 1 sec e svuota la barra di input. Tutto questo avviene solo se il testo digitato non è composto da soli spazi.
 
 La funzione `contactAnswer()` ha la stessa funzionalità di `newMessage` ma cambiano le proprietà dell' oggetto: status 'received', message 'ok' e data corrente.
 
@@ -215,7 +215,7 @@ La funzione `contactAnswer()` ha la stessa funzionalità di `newMessage` ma camb
 
 Per la ricerca dei contatti uso un v-model sulla barra di ricerca.
 
-Implemento la funzione ` searchContacts()` che darà come risultato l' array filtarto (un array composta dagli elementi di contacts che includono nel loro nome la stringa scritta dall' utente - senza considerare gli spazi e le maiuscole)
+Implemento la funzione ` searchContacts()` che darà come risultato l' array filtrato (un array composta dagli elementi di contacts che includono nel loro nome la stringa scritta dall' utente - senza considerare gli spazi e le maiuscole)
 
 Successivamente cambio nell' html l' array su cui fare il ciclo dei contatti, da contacts a searchContacts()
 
@@ -255,7 +255,7 @@ Ho quindi utilizzato la stessa strategia adottata per la visulizzazione della sc
 
 Dentro la fuznione `deleteMessage()` ho creato una condizione che imposta il valore di visible a false (quando l' indice è zero e l' array ha lunghezza 1).Così facendo al click sull' ultimo messaggio rimasto la chat non viene visualizzata perchè vuota.
 
-Tutto questo però non cancellava effettivamente il messaggio che appariva dopo aver scritto un nuovo nessaggio, ho quindi aggiunto alla funzione `newMessage()` la funzionalità di cancellazione del messaggio e della visualizzazione della chat (riassegnando a visible il valore true)
+Tutto questo però non cancella effettivamente il messaggio che quindi apparirà dopo aver scritto un nuovo messaggio, ho quindi aggiunto alla funzione `newMessage()` la funzionalità di cancellazione del messaggio stesso e della visualizzazione della chat (riassegnando a visible il valore true)
 
 ```html
 <!-- messaggio -->
@@ -309,7 +309,7 @@ Ho provato a dare ai singoli contatti un indice 'forzato' tramite la chiave orig
 
 `TypeError: Cannot read properties of undefined (reading 'message')`
 
-Su consiglio del tutor ho concentrato la mia attenzione sulla visibilità delle informazioni, implementando quindi un v-if all' inizio della lista dei contatti in modo da poter avviare la ricerca solo a determinate condizioni (che currentContact abbia un valore). Ho anche cambiato la funzionalità di currentContact, facendoli assumere il valore del contatto selezionato (con tutte le sue proprietà) e non dell' indice. In questo modo ho potuto richiamare le singole chiavi senza incontare errori ('currentContact.message').
+Su consiglio del tutor ho concentrato la mia attenzione sulla visibilità delle informazioni, implementando quindi un v-if all' inizio della lista dei contatti in modo da poter avviare la ricerca solo a determinate condizioni (che currentContact abbia un valore). Ho anche cambiato la funzionalità di currentContact, facendoli assumere il valore del contatto selezionato (con tutte le sue proprietà) e non dell' indice. In questo modo ho potuto richiamare le singole chiavi senza incontare errori (es. 'currentContact.message').
 
 ```
 
