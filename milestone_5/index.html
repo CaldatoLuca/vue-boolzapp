@@ -54,7 +54,7 @@
 
           <!-- ?main colonna di sinistra/ -->
           <div class="main-left flex flex-column">
-            <!-- campanellina -->
+            <!-- notifiche -->
             <div class="notifications flex align-center p-20">
               <div class="icon-container">
                 <i class="fa-solid fa-bell-slash"></i>
@@ -84,18 +84,21 @@
                     class="main-user flex p-20"
                     @click="changeContact(contact)"
                   >
+                    <!-- immagine profilo -->
                     <div class="img-container">
                       <img
                         :src="contact.avatar"
                         :alt="`Immagine di ${mainUser.name}`"
                       />
                     </div>
+                    <!-- nome e ultimo messaggio -->
                     <div>
                       <h4>{{ contact.name }}</h4>
                       <div class="last-message">
                         {{contact.messages[lastIndex(contact.messages)].message}}
                       </div>
                     </div>
+                    <!-- ora dell' ultimo messaggio -->
                     <div class="time">
                       {{contact.messages[lastIndex(contact.messages)].date}}
                     </div>
@@ -110,7 +113,7 @@
 
         <!-- *colonna di destra-->
         <div class="right-column">
-          <!-- chat col contatto specifico -->
+          <!-- ?chat -->
           <div v-if="currentContact" class="if-else-chat">
             <div class="contact-chat flex flex-column">
               <!-- ?header colonna di destra -->
@@ -142,13 +145,16 @@
                   class="message flex"
                   :class="checkStatus(message.status)"
                 >
+                  <!-- messaggio -->
                   <div
                     v-if="visibility()"
                     class="text flex space-between align-center"
                   >
+                    <!-- testo del messaggio -->
                     <div>{{message.message}}</div>
+                    <!-- data del messaggio -->
                     <span class="time">{{ message.date }}</span>
-                    <!-- freccia con opzioni messaggio -->
+                    <!-- freccia con opzioni messaggio -info-cancella -->
                     <i class="fa-solid fa-chevron-down"></i>
                     <div class="message-option">
                       <div class="message-info">Message info</div>
@@ -176,6 +182,7 @@
             </div>
             <!-- ?area di compilazione del messaggio/ -->
           </div>
+          <!-- ?chat/ -->
         </div>
         <!-- *colonna di destra-->
       </div>

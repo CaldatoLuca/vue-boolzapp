@@ -67,6 +67,7 @@ body {
 .main-left {
   height: calc(100% - 80px);
 }
+/* notifiche */
 .notifications {
   background-color: var(--blue-primary);
 }
@@ -81,6 +82,7 @@ body {
   justify-content: center;
   color: var(--blue-primary);
 }
+/* barra di ricerca */
 .left-search i {
   color: var(--grey-600);
   background-color: #ffffff;
@@ -99,6 +101,7 @@ body {
   border: 0.5px solid var(--grey-400);
   border-left: none;
 }
+/* lista contatti */
 .contacts {
   background-color: #ffffff;
   flex-grow: 1;
@@ -120,16 +123,18 @@ body {
   background-color: var(--grey-300);
   width: 65%;
 }
+/* chat */
 .if-else-chat {
   height: calc(100% - 80px);
 }
 .contact-chat {
   height: 100%;
 }
-
+/* informazioni contatto della chat corrente */
 .header-right {
   border-left: 2px solid var(--grey-600);
 }
+/* area di visualizzazione messaggi */
 .chat {
   background-image: url(../img/mine.jpg);
   flex-grow: 1;
@@ -179,6 +184,7 @@ body {
 .text:hover .message-option {
   display: inline-block;
 }
+/* barra compilazione messaggio */
 .right-search {
   background-color: var(--sand);
   height: 80px;

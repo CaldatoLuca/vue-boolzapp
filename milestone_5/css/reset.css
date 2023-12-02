@@ -20,6 +20,8 @@ ul {
 }
 input {
   border: none;
+  display: block;
+  margin: 0;
 }
 input:focus {
   border: none;
