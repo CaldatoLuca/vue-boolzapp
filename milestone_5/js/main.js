@@ -4,9 +4,6 @@ const { createApp } = Vue;
 
 const vueConfig = {
   data() {
-    let searchText = "";
-    let userText = "";
-    let currentContact = 0;
     const mainUser = {
       name: "John Doe",
       avatar: "./img/avatar_io.jpg",
@@ -176,73 +173,61 @@ const vueConfig = {
     ];
 
     return {
-      searchText,
-      userText,
-      currentContact,
+      searchText: "",
+      currentContact: null,
       mainUser,
       contacts,
+      userText: "",
     };
   },
   methods: {
     checkStatus(status) {
       return status;
     },
-    changeContact(index) {
-      this.currentContact = index;
+    changeContact(contact) {
+      this.currentContact = contact;
     },
-    selectedContact(index) {
-      if (this.currentContact === index) return "selected";
+    searchContacts() {
+      return this.contacts.filter((contact) => {
+        return contact.name
+          .toLowerCase()
+          .includes(this.searchText.toLowerCase().trim());
+      });
     },
     contactAnswer() {
-      const message = this.contacts[this.currentContact].messages;
-
-      this.contacts[this.currentContact].messages.push({
-        date: message[message.length - 1].date,
-        message: "ok!",
+      this.currentContact.messages.push({
+        message: "Ok!",
         status: "received",
+        date: new Date().toLocaleString(),
       });
     },
     newMessage() {
-      const message = this.contacts[this.currentContact].messages;
-      if (this.userText.trim() === "") {
-        return;
-      } else {
-        this.contacts[this.currentContact].messages.push({
-          date: message[message.length - 1].date,
+      this.currentContact.visible = true;
+      if (this.currentContact.messages.length === 1) {
+        this.currentContact.messages.splice(0, 1);
+      }
+
+      if (this.userText.trim() !== "") {
+        this.currentContact.messages.push({
           message: this.userText,
           status: "sent",
+          date: new Date().toLocaleString(),
         });
+
+        setTimeout(this.contactAnswer, 1000);
+
         this.userText = "";
       }
-      setTimeout(this.contactAnswer, 1000);
     },
-    searchContact() {
-      if (this.searchText !== "") {
-        return this.contacts
-          .filter((element) =>
-            element.name.toLowerCase().includes(this.searchText.toLowerCase())
-          )
-          .map((element) => {
-            return {
-              name: element.name,
-              avatar: element.avatar,
-              messages: element.messages,
-            };
-          });
+    deleteMessage(index) {
+      if (index === 0 && this.currentContact.messages.length === 1) {
+        this.currentContact.visible = false;
       } else {
-        return this.contacts;
+        this.currentContact.messages.splice(index, 1);
       }
     },
-    findIndex() {
-      if (this.searchText !== "") {
-        this.currentContact = this.searchContact().indexOf((element) =>
-          element.name.toLowerCase().includes(this.searchText.toLowerCase())
-        );
-      }
-      return this.currentContact;
-    },
-    deleteMessage(contactIndex, messageIndex) {
-      this.contacts[contactIndex].messages.splice(messageIndex, 1);
+    visibility() {
+      return this.currentContact.visible;
     },
     lastIndex(array) {
       return array.length - 1;

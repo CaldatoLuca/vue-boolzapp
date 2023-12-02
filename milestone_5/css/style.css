@@ -111,14 +111,20 @@ body {
   border-bottom: 1px solid var(--grey-500);
   cursor: pointer;
 }
+.contacts li:hover {
+  background-color: var(--grey-500);
+}
 
 /* !colonna di destra */
 .right-column {
   background-color: var(--grey-300);
   width: 65%;
 }
-.contact-chat {
+.if-else-chat {
   height: calc(100% - 80px);
+}
+.contact-chat {
+  height: 100%;
 }
 
 .header-right {

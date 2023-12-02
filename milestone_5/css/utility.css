@@ -44,6 +44,3 @@
 .received .text {
   background-color: white;
 }
-.selected {
-  background-color: var(--grey-500);
-}
