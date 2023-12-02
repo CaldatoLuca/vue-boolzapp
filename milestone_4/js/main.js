@@ -4,8 +4,6 @@ const { createApp } = Vue;
 
 const vueConfig = {
   data() {
-    let userText = "";
-    let currentContact = 0;
     const mainUser = {
       name: "John Doe",
       avatar: "./img/avatar_io.jpg",
@@ -32,7 +30,6 @@ const vueConfig = {
             status: "received",
           },
         ],
-        originalIndex: 0,
       },
       {
         name: "Fabio",
@@ -55,7 +52,6 @@ const vueConfig = {
             status: "sent",
           },
         ],
-        originalIndex: 1,
       },
       {
         name: "Samuele",
@@ -78,7 +74,6 @@ const vueConfig = {
             status: "received",
           },
         ],
-        originalIndex: 2,
       },
       {
         name: "Alessandro B.",
@@ -96,7 +91,6 @@ const vueConfig = {
             status: "received",
           },
         ],
-        originalIndex: 3,
       },
       {
         name: "Alessandro L.",
@@ -114,7 +108,6 @@ const vueConfig = {
             status: "received",
           },
         ],
-        originalIndex: 4,
       },
       {
         name: "Claudia",
@@ -137,7 +130,6 @@ const vueConfig = {
             status: "sent",
           },
         ],
-        originalIndex: 5,
       },
       {
         name: "Federico",
@@ -155,7 +147,6 @@ const vueConfig = {
             status: "received",
           },
         ],
-        originalIndex: 6,
       },
       {
         name: "Davide",
@@ -178,60 +169,50 @@ const vueConfig = {
             status: "received",
           },
         ],
-        originalIndex: 7,
       },
     ];
 
     return {
-      userText,
-      currentContact,
+      searchText: "",
+      currentContact: null,
       mainUser,
       contacts,
-      searchText: "",
+      userText: "",
     };
   },
   methods: {
     checkStatus(status) {
       return status;
     },
-    changeContact(index) {
-      this.currentContact = index;
+    changeContact(contact) {
+      this.currentContact = contact;
     },
-    selectedContact(index) {
-      if (this.currentContact === index) return "selected";
+    searchContacts() {
+      return this.contacts.filter((contact) => {
+        return contact.name
+          .toLowerCase()
+          .includes(this.searchText.toLowerCase().trim());
+      });
     },
     contactAnswer() {
-      this.contacts[this.currentContact].messages.push({
-        date: "10/01/2020 15:51:00",
-        message: "ok!",
+      this.currentContact.messages.push({
+        message: "Ok!",
         status: "received",
+        date: new Date().toLocaleString(),
       });
     },
     newMessage() {
-      if (this.userText.trim() === "") {
-        return;
-      } else {
-        this.contacts[this.currentContact].messages.push({
-          date: "10/01/2020 15:51:00",
+      if (this.userText.trim() !== "") {
+        this.currentContact.messages.push({
           message: this.userText,
           status: "sent",
+          date: new Date().toLocaleString(),
         });
+
+        setTimeout(this.contactAnswer, 1000);
+
         this.userText = "";
       }
-      setTimeout(this.contactAnswer, 1000);
-    },
-
-    searchContact() {
-      return this.contacts
-        .filter((contact) =>
-          contact.name.toLowerCase().includes(this.searchText.toLowerCase())
-        )
-        .map((contact) => {
-          return {
-            ...contact,
-            name: contact.name,
-          };
-        });
     },
   },
 };

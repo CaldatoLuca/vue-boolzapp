@@ -101,17 +101,25 @@ body {
   border-bottom: 1px solid var(--grey-500);
   cursor: pointer;
 }
+.contacts li:hover {
+  background-color: var(--grey-500);
+}
 
 /* !colonna di destra */
 .right-column {
   background-color: var(--grey-300);
   width: 65%;
-  border-left: 0.5px solid var(--grey-600);
+}
+.right-column .if-else-chat {
+  height: 100%;
 }
 .contact-chat {
-  height: calc(100% - 80px);
+  height: 100%;
 }
 
+.header-right {
+  border-left: 2px solid var(--grey-600);
+}
 .chat {
   background-image: url(../img/mine.jpg);
   flex-grow: 1;
@@ -122,15 +130,11 @@ body {
   width: 100%;
   margin-bottom: 5px;
 }
-
 .text {
   width: 40%;
-  height: auto;
   border-radius: 10px;
   padding: 20px;
-  overflow-wrap: break-word;
 }
-
 .right-search {
   background-color: var(--sand);
   height: 80px;
