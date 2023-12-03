@@ -205,3 +205,30 @@ body {
   text-align: center;
   gap: 5px;
 }
+
+/* !splash */
+.splash {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-primary);
+  color: var(--bg-secondary);
+  animation: fadeout 6s;
+  font-size: 30px;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.hidden {
+  display: none;
+  opacity: 0;
+}

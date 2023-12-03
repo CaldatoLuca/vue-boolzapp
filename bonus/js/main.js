@@ -189,6 +189,7 @@ const vueConfig = {
       contacts,
       userText: "",
       randomAnswer,
+      splashPage: "",
     };
   },
   methods: {
@@ -260,6 +261,11 @@ const vueConfig = {
         return "block";
       }
     },
+  },
+  mounted() {
+    setTimeout(() => {
+      this.splashPage = "hidden";
+    }, 3000);
   },
 };
 
