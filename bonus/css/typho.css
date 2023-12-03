@@ -1,0 +1,21 @@
+/* common */
+body {
+  font-family: "Lato", sans-serif;
+}
+i {
+  font-size: 1.4375rem;
+}
+
+/* notifiche */
+.notifications-alert div {
+  font-weight: bold;
+}
+/* lente barra di ricerca */
+.left-search i {
+  font-size: 1rem;
+}
+/* font size dell' ora e dell' ultimo messaggio */
+.time,
+.last-message {
+  font-size: 12px;
+}
