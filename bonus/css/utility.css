@@ -52,3 +52,10 @@
 .received .text {
   background-color: white;
 }
+/* !font size */
+.large {
+  font-size: larger;
+}
+.small {
+  font-size: smaller;
+}

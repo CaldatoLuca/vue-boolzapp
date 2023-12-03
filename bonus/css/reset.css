@@ -30,3 +30,12 @@ input:focus {
 i {
   cursor: pointer;
 }
+button {
+  margin: 10px;
+  border: none;
+  background-color: var(--grey-600);
+  color: var(--grey-400);
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+}

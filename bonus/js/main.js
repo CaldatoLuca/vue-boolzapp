@@ -190,6 +190,7 @@ const vueConfig = {
       userText: "",
       randomAnswer,
       splashPage: "",
+      fontSize: "",
     };
   },
   methods: {
@@ -260,6 +261,15 @@ const vueConfig = {
       } else {
         return "block";
       }
+    },
+    fontLarge() {
+      this.fontSize = "large";
+    },
+    fontMedium() {
+      this.fontSize = "";
+    },
+    fontSmall() {
+      this.fontSize = "small";
     },
   },
   mounted() {

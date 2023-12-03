@@ -27,7 +27,7 @@
   <body class="flex-center">
     <div id="app" v-cloak>
       <!-- *contenitore app-->
-      <div class="container flex">
+      <div class="container flex" :class="fontSize">
         <!-- *colonna di sinistra -->
         <div class="left-column">
           <!-- ?header colonna di sinistra -->
@@ -193,6 +193,12 @@
             <h3>Benvenuto</h3>
             <div>
               Per avviare una nuova chat seleziona il contatto desiderato.
+            </div>
+            <div>Scegli la dimensione del carattere desiderata:</div>
+            <div class="font-size-selection">
+              <button @click="fontLarge">Large</button>
+              <button @click="fontMedium">Medium</button>
+              <button @click="fontSmall">Small</button>
             </div>
           </div>
           <!-- ?chat/ -->

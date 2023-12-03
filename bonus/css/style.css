@@ -216,7 +216,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: var(--bg-primary);
   color: var(--bg-secondary);
-  animation: fadeout 6s;
+  animation: fadeout 5s;
   font-size: 30px;
 }
 @keyframes fadeout {
