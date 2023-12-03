@@ -321,4 +321,12 @@ Su consiglio del tutor ho concentrato la mia attenzione sulla visibilità delle 
 
 - Cambiare icona in basso a destra (a fianco all'input per scrivere un nuovo messaggio) finché l'utente sta scrivendo: di default si visualizza l'icona del microfono, quando l'input non è vuoto si visualizza l'icona dell'aeroplano. Quando il messaggio è stato inviato e l'input si svuota, si torna a visualizzare il microfono. Inviare quindi il messaggio anche cliccando sull'icona dell'aeroplano
 
+- Predisporre una lista di frasi e/o citazioni da utilizzare al posto della risposta "ok:" quando il pc risponde, anziché scrivere "ok", scegliere una frase random dalla lista e utilizzarla come testo del messaggio di risposta del pc
+
+- Visualizzare nella lista dei contatti l'ultimo messaggio inviato/ricevuto da ciascun contatto
+
+- Inserire l'orario corretto nei messaggi
+
 ### Grafica
+
+- Visualizzare un messaggio di benvenuto che invita l'utente a selezionare un contatto dalla lista per visualizzare i suoi messaggi, anziché attivare di default la prima conversazione
