@@ -334,3 +334,5 @@ Su consiglio del tutor ho concentrato la mia attenzione sulla visibilità delle 
 - Aggiungere una splash page visibile per 1s all'apertura dell'app
 
 - Aggiungere un'icona per ingrandire o rimpicciolire il font: dovrebbe essere sufficiente aggiungere una classe al wrapper principale
+
+- Aggiungere un'icona per cambiare la modalità light/dark: dovrebbe essere sufficiente aggiungere una classe al wrapper principale
