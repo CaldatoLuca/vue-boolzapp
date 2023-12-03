@@ -191,6 +191,7 @@ const vueConfig = {
       randomAnswer,
       splashPage: "",
       fontSize: "",
+      color: "",
     };
   },
   methods: {
@@ -270,6 +271,12 @@ const vueConfig = {
     },
     fontSmall() {
       this.fontSize = "small";
+    },
+    darkMode() {
+      this.color = "dark-mode";
+    },
+    lightMode() {
+      this.color = "";
     },
   },
   mounted() {

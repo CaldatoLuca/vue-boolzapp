@@ -27,9 +27,9 @@
   <body class="flex-center">
     <div id="app" v-cloak>
       <!-- *contenitore app-->
-      <div class="container flex" :class="fontSize">
+      <div class="container flex" :class="color">
         <!-- *colonna di sinistra -->
-        <div class="left-column">
+        <div class="left-column" :class="fontSize">
           <!-- ?header colonna di sinistra -->
           <div class="header-left flex space-between align-center p-15">
             <!-- informazioni utente proprietario -->
@@ -112,7 +112,7 @@
         <!-- *colonna di sinistra/ -->
 
         <!-- *colonna di destra-->
-        <div class="right-column">
+        <div class="right-column" :class="fontSize">
           <!-- ?chat -->
           <div v-if="currentContact" class="if-chat">
             <div class="contact-chat flex flex-column">
@@ -195,10 +195,16 @@
               Per avviare una nuova chat seleziona il contatto desiderato.
             </div>
             <div>Scegli la dimensione del carattere desiderata:</div>
-            <div class="font-size-selection">
+            <div>
               <button @click="fontLarge">Large</button>
               <button @click="fontMedium">Medium</button>
               <button @click="fontSmall">Small</button>
+            </div>
+
+            <div>
+              <button @click="darkMode">Dark Mode</button>
+
+              <button @click="lightMode">Light Mode</button>
             </div>
           </div>
           <!-- ?chat/ -->
