@@ -8,6 +8,16 @@ const vueConfig = {
       name: "John Doe",
       avatar: "./img/avatar_io.jpg",
     };
+    const randomAnswer = [
+      "Mia mamma diceva sempre: 'la vita è come una scatola di cioccolatini. Non sai mai quello che ti capita'",
+      "Tieni i tuoi amici vicini, ma i tuoi nemici ancora più vicini.",
+      "Lascio i problemi di domani al me di domani.",
+      "Ok!",
+      "Vivi e lascia vivere",
+      "Rosso di sera bel tempo si spera",
+      "Devo studiare Vue Js",
+      "Sono un robot",
+    ];
     const contacts = [
       {
         name: "Michele",
@@ -178,6 +188,7 @@ const vueConfig = {
       mainUser,
       contacts,
       userText: "",
+      randomAnswer,
     };
   },
   methods: {
@@ -196,7 +207,10 @@ const vueConfig = {
     },
     contactAnswer() {
       this.currentContact.messages.push({
-        message: "Ok!",
+        message:
+          this.randomAnswer[
+            Math.floor(Math.random() * this.randomAnswer.length)
+          ],
         status: "received",
         date: new Date().toLocaleString(),
       });
