@@ -122,17 +122,15 @@ body {
 .right-column {
   background-color: var(--grey-300);
   width: 65%;
+  border-left: 1px solid var(--grey-600);
 }
-/* chat */
-.if-else-chat {
+/* ?chat*/
+/* chat contatti */
+.if-chat {
   height: calc(100% - 80px);
 }
 .contact-chat {
   height: 100%;
-}
-/* informazioni contatto della chat corrente */
-.header-right {
-  border-left: 2px solid var(--grey-600);
 }
 /* area di visualizzazione messaggi */
 .chat {
@@ -198,4 +196,12 @@ body {
   color: var(--grey-700);
   width: 10%;
   text-align: center;
+}
+/* schermata di benevenuto */
+.else-chat {
+  background-color: var(--grey-500);
+  height: 100%;
+  color: var(--grey-600);
+  text-align: center;
+  gap: 5px;
 }

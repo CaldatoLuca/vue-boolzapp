@@ -114,7 +114,7 @@
         <!-- *colonna di destra-->
         <div class="right-column">
           <!-- ?chat -->
-          <div v-if="currentContact" class="if-else-chat">
+          <div v-if="currentContact" class="if-chat">
             <div class="contact-chat flex flex-column">
               <!-- ?header colonna di destra -->
               <div class="header-right flex space-between align-center p-15">
@@ -186,6 +186,14 @@
               ></i>
             </div>
             <!-- ?area di compilazione del messaggio/ -->
+          </div>
+
+          <div v-else class="else-chat flex-center flex-column">
+            <h1>Boolzapp Web</h1>
+            <h3>Benvenuto</h3>
+            <div>
+              Per avviare una nuova chat seleziona il contatto desiderato.
+            </div>
           </div>
           <!-- ?chat/ -->
         </div>
