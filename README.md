@@ -332,3 +332,5 @@ Su consiglio del tutor ho concentrato la mia attenzione sulla visibilità delle 
 - Visualizzare un messaggio di benvenuto che invita l'utente a selezionare un contatto dalla lista per visualizzare i suoi messaggi, anziché attivare di default la prima conversazione
 
 - Aggiungere una splash page visibile per 1s all'apertura dell'app
+
+- Aggiungere un'icona per ingrandire o rimpicciolire il font: dovrebbe essere sufficiente aggiungere una classe al wrapper principale
