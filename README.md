@@ -16,6 +16,8 @@ Creazione di una web app ispirata a WhatsApp Web.
 
 -[ Considerazioni finali](#considerazioni-finali)
 
+- [ Bonus ](#bonus)
+
 ## Milestone 1
 
 ### Consegna
@@ -311,6 +313,10 @@ Ho provato a dare ai singoli contatti un indice 'forzato' tramite la chiave orig
 
 Su consiglio del tutor ho concentrato la mia attenzione sulla visibilità delle informazioni, implementando quindi un v-if all' inizio della lista dei contatti in modo da poter avviare la ricerca solo a determinate condizioni (che currentContact abbia un valore). Ho anche cambiato la funzionalità di currentContact, facendoli assumere il valore del contatto selezionato (con tutte le sue proprietà) e non dell' indice. In questo modo ho potuto richiamare le singole chiavi senza incontare errori (es. 'currentContact.message').
 
-```
+## Bonus
 
-```
+### Funzionalità
+
+- Evitare che l'utente possa inviare un messaggio vuoto o composto solamente da spazi
+
+### Grafica
