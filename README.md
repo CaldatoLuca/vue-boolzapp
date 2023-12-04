@@ -1,5 +1,7 @@
 # Vue Boolzapp
 
+![Thumbnail](./readme_img/milestone1.jpeg)
+
 Creazione di una web app ispirata a WhatsApp Web.
 
 ### Indice
