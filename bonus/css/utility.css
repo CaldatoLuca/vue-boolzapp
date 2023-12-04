@@ -52,6 +52,10 @@
 .received .text {
   background-color: white;
 }
+/* !margini */
+.mb10 {
+  margin-bottom: 10px;
+}
 /* !font size */
 .large {
   font-size: larger;

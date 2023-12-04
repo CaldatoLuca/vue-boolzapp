@@ -243,6 +243,14 @@ const vueConfig = {
         this.currentContact.messages.splice(index, 1);
       }
     },
+    deleteMessages() {
+      this.currentContact.messages = [""];
+    },
+    deleteContact() {
+      const currentIndex = this.contacts.indexOf(this.currentContact);
+      this.contacts.splice(currentIndex, 1);
+      this.currentContact = null;
+    },
     visibility() {
       return this.currentContact.visible;
     },

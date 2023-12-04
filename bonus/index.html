@@ -133,7 +133,18 @@
                 <ul class="icons">
                   <li><i class="fa-solid fa-magnifying-glass"></i></li>
                   <li><i class="fa-solid fa-paperclip"></i></li>
-                  <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                  <li class="delete">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <!-- delete chat/contact -->
+                    <div class="chat-option">
+                      <div class="delete-messages mb10" @click="deleteMessages">
+                        Elimina messaggi
+                      </div>
+                      <div class="delete-chat" @click="deleteContact">
+                        Elimina chat
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
               <!-- ?header colonna di destra/ -->
@@ -157,7 +168,7 @@
                     <!-- freccia con opzioni messaggio -info-cancella -->
                     <i class="fa-solid fa-chevron-down"></i>
                     <div class="message-option">
-                      <div class="message-info">Message info</div>
+                      <div class="message-info mb10">Message info</div>
                       <div class="message-delete" @click="deleteMessage(index)">
                         Delete message
                       </div>

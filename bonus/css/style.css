@@ -124,6 +124,28 @@ body {
   width: 65%;
   border-left: 1px solid var(--grey-600);
 }
+/* ?header */
+.right-column .delete {
+  position: relative;
+  width: 20px;
+  text-align: center;
+}
+.delete .chat-option {
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  background-color: white;
+  color: var(--grey-700);
+  padding: 20px;
+  z-index: 99;
+  box-shadow: -10px 10px 10px -7px #000000;
+  cursor: pointer;
+  display: none;
+  text-align: left;
+}
+.delete:hover .chat-option {
+  display: inline-block;
+}
 /* ?chat*/
 /* chat contatti */
 .if-chat {
@@ -161,9 +183,6 @@ body {
   color: var(--grey-700);
   font-size: 15px;
 }
-.text:hover .fa-chevron-down {
-  display: inline-block;
-}
 .text .message-option {
   background-color: white;
   color: var(--grey-700);
@@ -176,10 +195,8 @@ body {
   display: none;
   cursor: pointer;
 }
-.message-option .message-info {
-  margin-bottom: 10px;
-}
-.text:hover .message-option {
+.text:hover .message-option,
+.text:hover .fa-chevron-down {
   display: inline-block;
 }
 /* barra compilazione messaggio */
