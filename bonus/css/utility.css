@@ -77,6 +77,7 @@
 .dark-mode .left-search,
 .dark-mode .right-search,
 .dark-mode .chat .message-option,
+.dark-mode .delete .chat-option,
 .dark-mode .received .text {
   background-color: var(--grey-700);
 }
@@ -87,6 +88,7 @@
 .dark-mode .time,
 .dark-mode .chat .message-option,
 .dark-mode .received .text,
+.dark-mode .delete .chat-option,
 .dark-mode .right-search i {
   color: white;
 }
